@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ik wil ZorgInzicht gebruiken | ZorgInzicht</title>
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --primary: #0f172a;
+      --border: #e2e8f0;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --radius: 20px;
+      --max: 760px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 28px 0 12px;
+    }
+
+    .back-link {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      margin: 12px 0 40px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .price-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      margin: 22px 0;
+    }
+
+    .price-box strong {
+      font-size: 1.4rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font: inherit;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .check-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin: 22px 0;
+    }
+
+    .check-row input {
+      width: auto;
+      margin-top: 5px;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      padding: 15px 22px;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 700;
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container">
+    <a href="index.html" class="back-link">← Terug naar home</a>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Ik wil ZorgInzicht gebruiken</h1>
+
+      <p class="lead">
+        Fijn dat u interesse heeft in ZorgInzicht.
+      </p>
+
+      <p class="lead">
+        Vul hieronder uw gegevens in. Wij maken daarna uw account gereed en sturen u een betaallink en de inloggegevens veilig per e-mail toe.
+      </p>
+
+      <div class="price-box">
+        <strong>€49 per maand</strong><br>
+        Maandelijks opzegbaar. Inclusief updates, beveiliging en ondersteuning.
+      </div>
+
+      <!-- Vervang JOUW_FORMSPREE_CODE door je eigen Formspree-code -->
+      <form action="https://formspree.io/f/JOUW_FORMSPREE_CODE" method="POST">
+        <div class="field">
+          <label for="naam">Naam</label>
+          <input id="naam" type="text" name="naam" required placeholder="Uw naam" />
+        </div>
+
+        <div class="field">
+          <label for="bedrijfsnaam">Bedrijfsnaam</label>
+          <input id="bedrijfsnaam" type="text" name="bedrijfsnaam" placeholder="Naam van uw bedrijf" />
+        </div>
+
+        <div class="field">
+          <label for="email">E-mailadres</label>
+          <input id="email" type="email" name="email" required placeholder="uw@emailadres.nl" />
+        </div>
+
+        <div class="field">
+          <label for="telefoon">Telefoonnummer</label>
+          <input id="telefoon" type="tel" name="telefoon" placeholder="Uw telefoonnummer" />
+        </div>
+
+        <div class="field">
+          <label for="beroep">Beroep / type zorgverlener</label>
+          <input id="beroep" type="text" name="beroep" placeholder="Bijvoorbeeld: zzp zorgverlener, begeleider, huishoudelijke ondersteuning" />
+        </div>
+
+        <div class="field">
+          <label for="startdatum">Gewenste startdatum</label>
+          <input id="startdatum" type="text" name="gewenste_startdatum" placeholder="Bijvoorbeeld: zo snel mogelijk of per 1 juni" />
+        </div>
+
+        <div class="field">
+          <label for="opmerking">Opmerking</label>
+          <textarea id="opmerking" name="opmerking" placeholder="Heeft u nog een vraag of opmerking?"></textarea>
+        </div>
+
+        <div class="check-row">
+          <input id="akkoord" type="checkbox" name="akkoord_prijs" required />
+          <label for="akkoord">
+            Ik begrijp dat ZorgInzicht €49 per maand kost en maandelijks opzegbaar is.
+          </label>
+        </div>
+
+        <input type="hidden" name="aanvraag_type" value="Ik wil ZorgInzicht gebruiken" />
+
+        <button type="submit" class="btn">
+          Aanvraag versturen
+        </button>
+      </form>
+
+      <p class="note">
+        Na verzending ontvangt u nog geen directe toegang. U ontvangt eerst een betaallink. Na betaling sturen wij uw persoonlijke inloggegevens toe.
+      </p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <a href="privacy.html">Privacyverklaring</a>
+  </footer>
+</body>
+</html>
