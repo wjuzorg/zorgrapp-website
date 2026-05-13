@@ -1,12 +1,11 @@
-<!DOCTYPE html><html lang="nl">
+<!DOCTYPE html>
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZorgInzicht – Meer overzicht. Minder administratie.</title>
-  <meta
-    name="description"
-    content="ZorgInzicht helpt zelfstandige zorgverleners met planning, cliëntendossiers, facturen en maandrapportages."
-  />
+  <meta name="description" content="ZorgInzicht helpt zelfstandige zorgverleners met planning, cliëntendossiers, facturen en maandrapportages." />
+
   <style>
     :root {
       --bg: #f8fafc;
@@ -14,199 +13,201 @@
       --text: #0f172a;
       --muted: #64748b;
       --primary: #0f172a;
-      --accent: #f8fafc;
       --border: #e2e8f0;
       --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
       --radius: 20px;
       --max: 1100px;
-    }* { box-sizing: border-box; }
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+    * { box-sizing: border-box; }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-.container {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-header {
-  position: sticky;
-  top: 0;
-  background: rgba(248, 250, 252, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-  z-index: 10;
-}
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 0;
-  gap: 16px;
-}
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(248, 250, 252, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
 
-.logo {
-  font-size: 1.6rem;
-  font-weight: 700;
-}
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      gap: 16px;
+    }
 
-.tagline {
-  font-size: 0.95rem;
-  color: var(--muted);
-}
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
+    .tagline {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
 
-.btn {
-  display: inline-block;
-  padding: 14px 22px;
-  border-radius: 14px;
-  font-weight: 600;
-  transition: 0.2s ease;
-}
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
 
-.btn-primary {
-  background: var(--primary);
-  color: #fff;
-  box-shadow: var(--shadow);
-}
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
 
-.btn-primary:hover {
-  transform: translateY(-1px);
-}
+    .btn-primary:hover {
+      transform: translateY(-1px);
+    }
 
-.btn-secondary {
-  border: 1px solid var(--border);
-  background: #fff;
-}
+    .hero {
+      padding: 72px 0 42px;
+    }
 
-.hero {
-  padding: 72px 0 48px;
-}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 850px;
+    }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 32px;
-  align-items: center;
-}
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 1.08;
+      margin: 0 0 20px;
+      letter-spacing: -0.04em;
+    }
 
-h1 {
-  font-size: clamp(2.4rem, 5vw, 4.5rem);
-  line-height: 1.1;
-  margin: 0 0 20px;
-}
+    h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      margin: 0 0 12px;
+      letter-spacing: -0.03em;
+    }
 
-h2 {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  margin: 0 0 12px;
-}
+    .lead {
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin: 0 0 26px;
+      max-width: 760px;
+    }
 
-.lead {
-  font-size: 1.2rem;
-  color: var(--muted);
-  margin-bottom: 28px;
-}
+    .trust {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
 
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 28px;
-}
+    section {
+      padding: 26px 0 54px;
+    }
 
-.hero-card h3 {
-  margin-top: 0;
-  font-size: 1.3rem;
-}
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
 
-.hero-card ul {
-  margin: 0;
-  padding-left: 20px;
-}
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 24px;
+    }
 
-section {
-  padding: 28px 0 60px;
-}
+    .feature-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
+    .muted {
+      color: var(--muted);
+    }
 
-.feature-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
+    .price-card,
+    .contact-card {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-.price {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 12px 0;
-}
+    .price {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 10px 0;
+    }
 
-.muted {
-  color: var(--muted);
-}
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
 
-.cta {
-  text-align: center;
-  padding-bottom: 80px;
-}
+    @media (max-width: 900px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
 
-footer {
-  border-top: 1px solid var(--border);
-  padding: 28px 0 40px;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
+      .nav {
+        align-items: flex-start;
+      }
 
-@media (max-width: 900px) {
-  .hero-grid,
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
+      .nav .btn {
+        padding: 12px 16px;
+        white-space: nowrap;
+      }
 
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+      .hero {
+        padding: 46px 0 26px;
+      }
 
-  .nav-links {
-    width: 100%; 
-  }
+      section {
+        padding: 22px 0 42px;
+      }
 
-  .nav-links .btn {
-    width: 100%; 
-    text-align: center;
-  }
+      .card {
+        padding: 22px;
+      }
 
-  .hero {
-    padding-top: 40px;
-  }
-}
+      h1 {
+        font-size: 2.55rem;
+      }
 
+      .lead {
+        font-size: 1.05rem;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -214,103 +215,104 @@ footer {
         <div class="logo">ZorgInzicht</div>
         <div class="tagline">Meer overzicht. Minder administratie.</div>
       </div>
-      <div class="nav-links">
-        <a href="#functionaliteiten" class="btn btn-secondary">Functionaliteiten</a>
-        <a href="#tarieven" class="btn btn-secondary">Tarieven</a>
-        <a href="#demo" class="btn btn-primary">Vraag een demo aan</a>
-      </div>
+
+      <a href="#contact" class="btn btn-primary">Ontvang informatie</a>
     </div>
-  </header>  <main>
+  </header>
+
+  <main>
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <h1>Speciaal gebouwd voor zelfstandige zorgverleners.</h1>
           <p class="lead">
-            Planning, cliëntdossiers, signaleringen, facturen en maandrapportages
-            in één eenvoudige app.
+            Planning, cliëntdossiers, signaleringen, facturen,
+            cliëntenrapportages en boekhouder-export in één eenvoudige app.
           </p>
-          <a href="#demo" class="btn btn-primary">Vraag een gratis demo aan</a>
-        </div><div class="card hero-card">
-      <h3>Wat ZorgInzicht voor u doet</h3>
-      <ul>
-        <li>Afspraken plannen</li>
-        <li>Cliëntgeschiedenis bijhouden</li>
-        <li>Signaleringen registreren</li>
-        <li>Facturen maken</li>
-        <li>Maandrapportages exporteren</li>
-        <li>AVG-bewust werken</li>
-      </ul>
-    </div>
-  </div>
-</section>
 
-<section id="functionaliteiten">
-  <div class="container">
-    <h2>Alles wat u nodig heeft</h2>
-    <p class="muted">Ontwikkeld met de dagelijkse praktijk van de zorgverlener als uitgangspunt.</p>
+          <a href="#contact" class="btn btn-primary">Ontvang informatie</a>
 
-    <div class="grid-3">
-      <div class="card">
-        <div class="feature-title">📅 Planning</div>
-        <p>Overzicht van alle afspraken, cliënten en open acties.</p>
+          <p class="trust">
+            Speciaal ontwikkeld voor zelfstandige zorgverleners in Nederland.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <div class="feature-title">👥 Cliëntendossiers</div>
-        <p>Notities, signaleringen en volledige cliëntgeschiedenis op één plek.</p>
+    <section id="functionaliteiten">
+      <div class="container">
+        <h2>Alles wat u nodig heeft</h2>
+        <p class="muted">
+          Ontwikkeld met de dagelijkse praktijk van de zorgverlener als uitgangspunt.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="feature-title">📅 Planning</div>
+            <p>Overzicht van afspraken, cliënten en open acties.</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-title">👥 Cliëntendossiers</div>
+            <p>Notities, signaleringen en cliëntgeschiedenis op één plek.</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-title">💶 Facturen</div>
+            <p>Facturen maken en betalingen overzichtelijk opvolgen.</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-title">📊 Rapportages & boekhouder</div>
+            <p>Maandrapportages en exports direct klaar voor uw administratie.</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-title">🔐 AVG-bewust</div>
+            <p>Inloggen, gebruikersafscherming en verwerkersovereenkomst.</p>
+          </div>
+
+          <div class="card">
+            <div class="feature-title">📱 Werkt op telefoon</div>
+            <p>Toevoegen aan startscherm en gebruiken als app.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <div class="feature-title">💶 Facturen</div>
-        <p>Automatisch facturen genereren en opvolgen van betalingen.</p>
+    <section id="tarieven">
+      <div class="container">
+        <div class="card price-card">
+          <h2>Eenvoudig en betaalbaar</h2>
+          <div class="price">€49 <span style="font-size:1.2rem; font-weight:400;">per maand</span></div>
+          <p class="muted">
+            Maandelijks opzegbaar. Inclusief updates, beveiliging en ondersteuning.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <div class="feature-title">📊 Rapportages</div>
-        <p>Maandrapportages voor cliënten en voor uw boekhouder.</p>
+    <section id="contact">
+      <div class="container">
+        <div class="card contact-card">
+          <h2>Ontvang vrijblijvend informatie</h2>
+          <p class="muted">
+            U ontvangt vrijblijvend screenshots en uitleg per e-mail.
+          </p>
+
+          <p>
+            E-mail: <strong>info@zorginzichtapp.nl</strong>
+          </p>
+
+          <a href="mailto:info@zorginzichtapp.nl?subject=Informatie%20ZorgInzicht" class="btn btn-primary">
+            Mail mij informatie
+          </a>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <div class="card">
-        <div class="feature-title">🔐 AVG-bewust</div>
-        <p>Inloggen, gebruikersafscherming en verwerkersovereenkomst.</p>
-      </div>
-
-      <div class="card">
-        <div class="feature-title">📱 Werkt op telefoon</div>
-        <p>Toevoegen aan startscherm en gebruiken als app.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="tarieven">
-  <div class="container">
-    <div class="card" style="text-align:center;">
-      <h2>Eenvoudig en betaalbaar</h2>
-      <div class="price">€49 <span style="font-size:1.2rem; font-weight:400;">per maand</span></div>
-      <p class="muted">Inclusief updates, beveiliging en ondersteuning.</p>
-    </div>
-  </div>
-</section>
-
-<section id="demo" class="cta">
-  <div class="container">
-    <div class="card">
-      <h2>Vraag een gratis demo aan</h2>
-      <p class="muted">
-        Ontdek hoe ZorgInzicht u tijd bespaart en administratie eenvoudiger maakt.
-      </p>
-      <p>
-        E-mail: <strong>info@zorginzichtapp.nl</strong>
-      </p>
-      <a href="mailto:info@zorginzichtapp.nl?subject=Demo%20ZorgInzicht" class="btn btn-primary">
-        Demo aanvragen
-      </a>
-    </div>
-  </div>
-</section>
-
-  </main>  <footer>
+  <footer>
     <div class="container">
       © 2026 ZorgInzicht – Meer overzicht. Minder administratie.
     </div>
